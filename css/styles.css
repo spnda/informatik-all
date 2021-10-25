@@ -77,10 +77,12 @@ div.pagebuttons > button {
     padding: 3px;
 }
 .right {
+    margin-left: -7.5px; /* Half of fixed 15px height. */
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
 }
 .left {
+    margin-left: 7.5px; /* Half of fixed 15px height. */
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
 }
