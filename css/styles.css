@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    color: black;
+}
+
+#app {
+    overflow: hidden;
+}
+
+/* Base page slider transition and transform */
+.pageslider-forward-leave-active, .pageslider-forward-enter-active,
+.pageslider-back-leave-active,    .pageslider-back-enter-active {
+    transition: all 0.5s ease-in-out;
+}
+.pageslider-forward-enter, .pageslider-back-leave-to {
+    transform: translate(100%, 0);
+}
+.pageslider-forward-leave-to, .pageslider-back-enter {
+    transform: translate(-100%, 0);
+}
+
+/* The vue slider value */
+.page-slider {
+    overflow: hidden;
+    position: relative;
+    height: 100px;
+    width: 90%;
+}
+
+/* A single page */
+.page {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+.pagetitle {
+    /* Center the div. */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* Translates the div back a bit to account for the actual rendered size. */
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/* The buttons on every page. */
+.pagebuttons {
+    /* Align the buttons in the bottom right of the page. */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+div.pagebuttons > button {
+    border: none;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    padding: 10px;
+}
+.arrow {
+    width: 15px;
+    height: 15px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+/* Link styling, but not the team titles */
+a:not(.teamtitle) {
+    transition: 0.3s; /* Add a slight transition to when a link is hovered/active. */
+}
+a:not(.teamtitle):link, a:not(.teamtitle):visited {
+    color: rgb(0, 57, 143);
+    text-decoration: none;
+}
+a:not(.teamtitle):hover, a:not(.teamtitle):active {
+    color: rgb(0, 101, 252);
+    text-decoration: none;
+}
+
+/* Font styling */
+h1.teamtitle {
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+a.teamtitle {
+    color: black;
+    text-decoration: none;
+}
+.topicitem {
+    font-size: 1.5em;
+}
