@@ -10,14 +10,20 @@
         <div id="app">
             <transition-group tag="div" class="page-slider" :name="back ? 'pageslider-back' : 'pageslider-forward'">
                 <div v-if="pageIndex === 0" key="1" class="page">
-                    <div class="pagetitle">
-                        <h1 class="teamtitle">Team 1:</h1>
+                    <div class="pagecontent">
+                        <h1 class="teamtitle">Team 1</h1>
+                        <h5 class="teamfooter">Tim, Otabek, und Yogi</h5>
+                        <ul>
+                            <li class="topicitem"><a href="#">NETZ: Internet, Struktur, Historie, Aufbau</a></li>
+                            <li class="topicitem"><a href="#">HTML: Was ist HTML, Simples Beispiel, Browser, Seitenstruktur, Geschichte</a></li>
+                        </ul>
                     </div>
                 </div>
 
                 <div v-if="pageIndex === 1" key="2" class="page">
-                    <div class="pagetitle">
-                        <h1 class="teamtitle"><a class="teamtitle" href="https://spnda.github.io/cs-presentation/">Team 2:</a></h1>
+                    <div class="pagecontent">
+                        <h1 class="teamtitle"><a class="teamtitle" href="https://spnda.github.io/cs-presentation/">Team 2</a></h1>
+                        <h5 class="teamfooter">Loukas, Samuel, und Sean</h5>
                         <ul>
                             <li class="topicitem"><a href="https://spnda.github.io/cs-presentation/ip_adressen/">NETZ: IP-Addressen, Subnetz</a></li>
                             <li class="topicitem"><a href="https://spnda.github.io/cs-presentation/html/">HTML: Editoren, Doc Types, Headings, Paragraphen</a></li>
@@ -26,8 +32,9 @@
                 </div>
 
                 <div v-if="pageIndex === 2" key="3" class="page">
-                    <div class="pagetitle">
-                        <h1 class="teamtitle"><a class="teamtitle" href="https://rexonfury.github.io/Informatik/index.html">Team 3:</a></h1>
+                    <div class="pagecontent">
+                        <h1 class="teamtitle"><a class="teamtitle" href="https://rexonfury.github.io/Informatik/index.html">Team 3</a></h1>
+                        <h5 class="teamfooter">Jakob, Max, und Nathal</h5>
                         <ul>
                             <li class="topicitem"><a href="https://rexonfury.github.io/Informatik/TCP.html">NETZ: TCP</a></li>
                             <li class="topicitem"><a href="https://rexonfury.github.io/Informatik/HTML.html">HTML: Elemente, verschachtelte Elemente, 10 interessante Tags</a></li>
@@ -36,8 +43,9 @@
                 </div>
 
                 <div v-if="pageIndex === 3" key="4" class="page">
-                    <div class="pagetitle">
-                        <h1 class="teamtitle"><a class="teamtitle" href="https://kimo-boop.github.io/cs-presentation">Team 4:</a></h1>
+                    <div class="pagecontent">
+                        <h1 class="teamtitle"><a class="teamtitle" href="https://kimo-boop.github.io/cs-presentation">Team 4</a></h1>
+                        <h5 class="teamfooter">Berk, Fred, und Karim</h5>
                         <ul>
                             <li class="topicitem"><a href="https://kimo-boop.github.io/cs-presentation/index2.html">NETZ: MAC-Addressen</a></li>
                             <li class="topicitem"><a href="https://kimo-boop.github.io/cs-presentation/Index3.html">HTML: Links, Bilder, Sourcecode in Browsern</a></li>
@@ -46,8 +54,8 @@
                 </div>
             </transition-group>
             <div class="pagebuttons">
-                <button @click="previous()"><i class="arrow left"></i></button>
-                <button @click="next()"><i class="arrow right"></i></button>
+                <button class="pagebutton" @click="previous()"><i class="arrow left"></i></button>
+                <button class="pagebutton" @click="next()"><i class="arrow right"></i></button>
             </div>
         </div>
 

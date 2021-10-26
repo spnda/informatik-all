@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
 
 * {
     font-family: 'Roboto', sans-serif;
@@ -42,7 +42,7 @@ body {
     height: 100vh;
     width: 100vw;
 }
-.pagetitle {
+.pagecontent {
     /* Center the div. */
     position: absolute;
     left: 50%;
@@ -59,7 +59,7 @@ body {
     bottom: 0;
     right: 0;
 }
-div.pagebuttons > button {
+.pagebutton {
     border: none;
     height: 100px;
     width: 100px;
@@ -67,6 +67,13 @@ div.pagebuttons > button {
     margin-bottom: 20px;
     margin-right: 20px;
     padding: 10px;
+    transition: all 0.5s ease;
+    transform: scale(1); /* We need this scale here for the hover scaling to work. */
+    background-color: #F1F1F1;
+}
+.pagebutton:hover {
+    background-color: #BEBEBE;
+    translate: scale(1.5);
 }
 .arrow {
     width: 15px;
@@ -104,11 +111,17 @@ a:not(.teamtitle):hover, a:not(.teamtitle):active {
 h1.teamtitle {
     font-size: 4em;
     font-weight: bold;
-    margin-bottom: 0.5em;
+    margin-bottom: 0; /* The footer should be directly underneath. */
 }
 a.teamtitle {
     color: black;
     text-decoration: none;
+}
+h5.teamfooter {
+    color: #A0A0A0;
+    margin-top: 0;
+    margin-bottom: 1.5em;
+    font-weight: 300;
 }
 .topicitem {
     font-size: 1.5em;
