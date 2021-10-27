@@ -11,7 +11,7 @@ new Vue({
         back: false,
         pageIndex: 0,
     },
-    mounted() {
+    created() {
         let indx = Cookies.get('pageIndex');
         if (indx !== undefined) {
             this.pageIndex = parseInt(indx);
